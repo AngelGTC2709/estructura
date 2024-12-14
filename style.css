@@ -6,6 +6,7 @@
     --color-purple:rgb(99, 91, 255);
     --color-blue: rgb(10, 37, 64);
     --color-black:rgb(58, 58, 58);
+    --color-cian:#00d5ff;
 }
 
 *{
@@ -15,6 +16,7 @@
 body{
     font-family:"Inter", sans-serif;
     line-height: 1.5;
+
 }
 input{
     font-family:initial ;
@@ -33,6 +35,7 @@ img{
 }
 .content{
     margin-inline: auto;
+    z-index: 1;
     max-width: 1100px;
 }
 .gradient-bk::before{
@@ -187,6 +190,9 @@ h1{
 .logo{
     width: 32px;
 }
+.cian{
+    --text-color:var(--color-cian);
+}
 .purple{
     color: var(--text-color, --color-grey);
     font-size: 2rem;
@@ -222,6 +228,57 @@ h1{
 .text-1{
     --text-h:1.3rem;
     --text-a:700;
+}
+.gray::before,
+.font::after {
+    position: absolute;
+    top: 4600px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height:100%;
+    content: ''; 
+    z-index: -1;
+
+}
+.gray::before{ 
+    background-size: cover;
+    background-color: #F6F9FC;
+}
+.in{
+    display: flex;
+    flex-wrap: wrap;
+    padding-block: 10rem 7rem ;
+}
+.font::after{
+    background-size: cover;
+    background-color:var(--color-blue) ;
+    clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
+}
+.h{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    padding-block: 2rem 2rem;
+    color: var(--color-white);
+}
+.subtext{
+    color: var(--color-white);
+    opacity: .7;
+}
+
+.a1{
+    width: 270px;
+    font-size: 25px
+}
+.mundo{
+    position: absolute;
+    z-index: 0;
+    top: 4695px;
+    width: 86.6%;
+}
+#text-2{
+    font-size: 1rem;
 }
 @media (width > 680px) {
     .brands{
